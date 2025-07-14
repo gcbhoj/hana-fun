@@ -32,7 +32,7 @@ const MainLayout = () => {
   }, [theme]);
 
   return (
-    <div className="bg-white dark:bg-zinc-800 dark:text-white min-h-screen font-serif">
+    <div className="bg-[rgba(215,122,97,.5)] dark:bg-zinc-800 dark:text-white min-h-screen font-serif">
       <div className="flex justify-end mr-1">
         <div className="bg-zinc-300 dark:bg-zinc-700 p-2 rounded-xl flex w-[100px] h-10 items-center m-1">
           <button

@@ -1,4 +1,5 @@
 import React from "react";
+import LearningPage from "./Pages/LearningPage";
 
 import {
   Route,
@@ -15,6 +16,7 @@ const App = () => {
     createRoutesFromElements(
       <Route path="/" element={<MainLayout />}>
         <Route index element={<HomePage />} />
+        <Route path="/learn" element={<LearningPage />} />
       </Route>
     )
   );
