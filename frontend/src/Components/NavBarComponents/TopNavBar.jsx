@@ -6,6 +6,7 @@ const TopNavBar = () => {
     { itemName: "Home", pageLink: "/" },
     { itemName: "Games", pageLink: "/games" },
     { itemName: "Learning", pageLink: "/learn" },
+    { itemName: "Quiz", pageLink: "/quiz" },
   ];
 
   const [activeIndex, setActiveIndex] = useState(null);

@@ -9,13 +9,18 @@ const Navbar = () => {
   const location = useLocation();
   const navigate = useNavigate();
 
-  // Define routes where you want to hide the main top nav
-  const hiddenRoutes = ["/learn", "/game"]; // Can be extended
+  const hiddenRoutes = ["/learn", "/game", "/quiz"];
 
-  // If the pathname starts with one of the hidden routes
   const shouldHideTopNav = hiddenRoutes.some((path) =>
     location.pathname.startsWith(path)
   );
+
+  const getTitle = () => {
+    if (location.pathname.startsWith("/learn")) return "Learning Mode";
+    if (location.pathname.startsWith("/game")) return "Game Mode";
+    if (location.pathname.startsWith("/quiz")) return "Quiz Mode";
+    return "Back";
+  };
 
   if (shouldHideTopNav) {
     return (
@@ -25,18 +30,9 @@ const Navbar = () => {
           height="h-10"
           hoverLabel="Back"
           onClick={() => navigate("/")}
-          iconImage={
-            <MdKeyboardBackspace className="dark:text-zinc-400" />
-          }
+          iconImage={<MdKeyboardBackspace className="dark:text-zinc-400" />}
         />
-
-        <h1 className="text-xl font-semibold">
-          {location.pathname.includes("/learn")
-            ? "Learning Mode"
-            : location.pathname.includes("/game")
-            ? "Game Mode"
-            : "Back"}
-        </h1>
+        <h1 className="text-xl font-semibold">{getTitle()}</h1>
       </div>
     );
   }

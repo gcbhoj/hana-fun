@@ -6,6 +6,7 @@
         {
           "question": "In order to start constructing the house, Charlie and his father needed to gather some wood from the forest. If they initially have 15 extra planks of wood in the house and Charlie and his father got 10 planks of wood each, how many pieces of wood do they have in total? ",
           "structure": [15, 10, 10],
+          
           "answer": "There are 35 planks of wood."
         },
         {
